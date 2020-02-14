@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1b2838
+}
+
+
+div.header {
+    background: #171a21;
+    padding: 30px;
+}
+
+div.menu ol li, a{
+    display: inline;
+    margin: auto 10px auto;
+    color: #c6c4c1;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+div.menu h1 {
+    display: inline;
+    color: #fff;
+    margin-right: 70px;
+}
+
+div.menu ol {
+    margin: 0 200px ;
+}
+
+footer {
+    background: #101822;
+    position: absolute;
+    bottom: 0;
+    padding: 50px 300px ;
+    
+}
+
+footer p{
+    color: #c6c4c1;
+    font-size: 13px;
+}
+
+img {
+    position: absolute;
+    bottom: 40px;
+    left: 160px;
+}
