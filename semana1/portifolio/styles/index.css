@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 250vh;
+}
+
+h5 {
+    position: absolute;
+    margin: 8% 5% 0 68%;
+    font-size: 40px;
+}
+
+
+div.menu li a{
+   display: inline;
+    margin: auto 10px auto;
+    color: black;
+    text-decoration: none;
+}
+div.menu li {
+    float: right;
+    display: inline;
+    margin: 15px 5px;
+    margin-right: 80px;
+}
+div.menu {
+    display: inline;
+}
+
+.one {
+    background: url(../public/1888.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    width: 50%;
+    height: 420px;
+    border: none;
+    margin: 0;
+}
+
+.seila h2 {
+    font-size: 45px;
+    position: absolute;
+    right: 18%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+.seila h1 {
+    font-size: 55px;
+    position: absolute;
+    right: 12%;
+    margin-top: 15%;
+    z-index: 1;
+    text-align: center;
+}
+
+.two .portifolio{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.portifolio h1, p, h2, li, span{
+    margin: 0 20%;
+    text-align: center;
+    z-index: 1;
+}
+
+.two h2 {
+    margin-bottom: 2%;
+    font-size: 50px;
+    margin-top: 5%;
+}
+.two h2.txt01 {
+    margin-top: 30%;
+}
+.two p, li{
+    font-size: 25px;
+}
+.two li {
+    list-style-type: none;
+}
+.two span {
+ font-size: 20px;
+}
+
+.devprojects button {
+    padding: 5px;
+    margin-left: 10%;
+}
+.devprojecs li {
+    text-decoration: none;
+}
+
+footer {
+    background: #101822;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 50px 300px ;
+}
+
+footer button, input {
+    padding: 5px;
+}
+footer input {
+    margin-left: 250px;
+}
+

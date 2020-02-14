@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    background: url(../public/2301708.jpg) no-repeat right bottom fixed;
+    background-size: 65%;
+}
+
+
+h1 {
+    margin: 1% 10% 2% 10%;
+    font-size: 25px;
+}
+
+p, li {
+    font-size: 15px;
+    margin: 1% 2%;
+    width: 800px;
+    text-align: justify;
+}
+
+img {
+    margin-left: 25px;
+    position: absolute;
+    width: 600px;
+    height: 220px;
+}
