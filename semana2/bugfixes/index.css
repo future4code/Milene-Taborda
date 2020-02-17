@@ -72,6 +72,11 @@ div img {
     color: white;
 }
 
+#container-de-descricao div {
+    position: relative;
+    top: 15%;
+}
+
 #container-de-descricao>ol {
     padding: 15px 0px;
 }
@@ -145,5 +150,5 @@ td button:hover {
 
 .botao-amarelo {
     display: block;
-    margin:0 auto;
+    margin: 25px auto;
 }
