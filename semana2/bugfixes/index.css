@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    outline: 0;
 }
 
 h2 {
@@ -85,7 +86,7 @@ div>p:first-child {
 #container-de-descricao>ol {
     padding: 15px 0px;
 }
-#ol {
+#container-de-descricao ol {
     display: inline-block;
 }
 
@@ -170,7 +171,7 @@ td button:hover {
 }
 
 #back-button:hover {
-    background-color: #635a3d
+    background-color: #635a3d;
 }
 #back-button a:active {
     color: white;
