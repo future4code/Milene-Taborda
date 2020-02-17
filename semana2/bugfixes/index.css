@@ -142,3 +142,8 @@ td button:hover {
 #back-button:hover {
     background-color: #635a3d
 }
+
+.botao-amarelo {
+    display: block;
+    margin:0 auto;
+}
