@@ -34,16 +34,16 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
-    background: black;
-}
-
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
     height: 40px;
     border-radius: 5px;
     font-size: 20px;
+   color: white;
+}
+.botao-amarelo a {
+    text-decoration: none;
 }
 
 .botao-amarelo:hover {
@@ -77,13 +77,16 @@ div img {
     color: white;
 }
 
-#container-de-descricao div {
+#container-de-descricao>div {
     position: relative;
-    top: 15%;
+    top: 30%;
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+}
+#ol {
+    display: inline-block;
 }
 
 #container-para-comprar {
@@ -94,6 +97,9 @@ div img {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+}
+.container a {
+    text-decoration: none;
 }
 
 
@@ -136,9 +142,7 @@ td button:hover {
 }
 
 .container-do-search input {
-    border-top: 0 ;
-    border-left: 0;
-    border-right: 0;
+    border:none;
     border-bottom: 2px solid rgb(177, 175, 175);
 }
 
@@ -158,6 +162,11 @@ td button:hover {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    margin-top: 85px;
+}
+
+#back-button a{
+    text-decoration: none;
 }
 
 #back-button:hover {
