@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex: 1;
+}
+
+header {
+    display: flex;
+    height: 50px;
+    background: red;
+}
+
+.first, .main {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.first li, .main li {
+    margin: 5px;
+    width: 24vw;
+    padding: 43px;
+}
+
+.second {
+    display: flex;
+    color: white;
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex: 1;
+}
+.second li {
+    margin: 5px;
+    width: 31vw;
+    padding: 108px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.footer li {
+    margin: 5px;
+    width: 24vw;
+    padding: 43px;
+}
+
+
+#one { background: blue; }
+#two {background: yellow; }
+#tree { background: green; }
+#for {background: blue; }
+#five {background: yellow; }
+#six {background: green; }
+#seven {background: black; }
+#eight {background: black; }
+#nine{border: 1px solid black; }
+#ten { border: 1px solid black; }
+#eleven {border: 1px solid black; }
+
+
+@media screen and (max-width: 400px) {
+    .first , .main, .second, .footer{
+        display: block;
+    }
+
+    .second li, .footer li{
+        width: 70vw;
+        padding: 42px;
+    }
+
+    .first li, .main li, .second li {
+        width: 72vw;
+    }
+}
