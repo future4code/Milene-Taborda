@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    flex: 1;
 }
 
 header {
@@ -16,13 +15,12 @@ header {
     flex-wrap: wrap;
     list-style-type: none;
     justify-content: space-evenly;
-    flex: 1;
 }
 
 .first li, .main li {
     margin: 5px;
-    width: 24vw;
-    padding: 43px;
+    width: 30vw;
+    height: 15vh;
 }
 
 .second {
@@ -30,12 +28,11 @@ header {
     color: white;
     list-style-type: none;
     justify-content: space-evenly;
-    flex: 1;
 }
 .second li {
     margin: 5px;
-    width: 31vw;
-    padding: 108px;
+    width: 47.4vw;
+    height: 38vh;
 }
 
 .footer {
@@ -43,15 +40,19 @@ header {
     flex-wrap: wrap;
     list-style-type: none;
     justify-content: space-evenly;
-    flex: 1;
+    
 }
 
 .footer li {
     margin: 5px;
-    width: 24vw;
-    padding: 43px;
+    width: 31vw;
+    height: 15vh;
 }
 
+li { display: grid; 
+    align-items: center; 
+    border: 1px solid black;
+}
 
 #one { background: blue; }
 #two {background: yellow; }
@@ -66,17 +67,29 @@ header {
 #eleven {border: 1px solid black; }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .first , .main, .second, .footer{
-        display: block;
-    }
-
-    .second li, .footer li{
-        width: 70vw;
-        padding: 42px;
+        flex-wrap: wrap;
     }
 
     .first li, .main li, .second li {
-        width: 72vw;
+        width: 45vw;
+    }
+    .first li.tree, .main li.tree, .footer li.tree {
+        width: 93vw;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .first li, .main li, .second li, .footer li {
+        width: 90vw;
+    }
+    .first li.tree, .main li.tree, .footer li.tree {
+        width: 90vw;
+    }
+    .second li {
+        height: 15vh;
     }
 }
