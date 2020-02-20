@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: red;
+    display: grid;
+    grid-template-rows: 10vh;
+}
+
+.first {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns:5px 2fr 2fr 2fr 5px;
+    grid-template-rows: 15vh 15vh;
+    grid-template-areas: ". one two tree ." ". for five six .";
+    grid-gap: 30px 50px ;
+    margin-top: 25px;
+}
+.second {
+    display: grid;
+    grid-template-columns: 5px 2fr 2fr 5px;
+    grid-template-rows: 25vh;
+    grid-template-areas: ". seven eight .";
+    gap: 50px;
+    margin-top: 25px;
+    list-style-type: none;
+    color: white;
+}
+
+.footer {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns:5px 2fr 2fr 2fr 5px;
+    grid-template-rows: 15vh; 
+    grid-template-areas: ". nine ten eleven .";
+    gap: 30px 50px; 
+    margin-top: 25px;
+}
+
+li { display: grid; 
+    align-items: center; 
+    border: 1px solid black;
+}
+
+#one { background: blue; grid-area: one;}
+#two {background: yellow;grid-area: two; }
+#tree { background: green; grid-area: tree;}
+#for {background: blue; grid-area: for;}
+#five {background: yellow; grid-area: five;}
+#six {background: green; grid-area: six;}
+#seven {background: black; grid-area: seven;}
+#eight {background: black; grid-area: eight;}
+#nine{border: 1px solid black; grid-area: nine;}
+#ten { border: 1px solid black; grid-area: ten;}
+#eleven {border: 1px solid black; grid-area: eleven;}
+
+@media screen and (max-width: 600px) {
+    .first {
+        grid-template-columns:5px 2fr 2fr 5px;
+        grid-template-rows: 15vh 15vh 15vh 15vh;
+        grid-template-areas: ". one two ." ". tree tree ." ". for five ." ". six six .";
+        grid-gap: 15px;
+    }
+
+    .second {
+        grid-template-columns:5px 2fr 2fr 5px;
+        grid-template-rows: 40vh;
+        grid-template-areas: ". seven eight .";
+        grid-gap: 15px;
+    }
+
+    .footer {
+        grid-template-columns:5px 2fr 2fr 5px;
+        grid-template-rows: 15vh 17vh; 
+        grid-template-areas: ". nine ten ." ". eleven eleven .";
+        grid-gap: 15px;
+    }
+
+    #eleven {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .first {
+        grid-template-columns: 5px 2fr 5px;
+        grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
+        grid-template-areas: ". one ." ". two ." ". tree ."
+                             ". for ." ". five ." ". six ."
+                            
+    }
+
+    .second {
+        grid-template-columns: 5px 2fr 5px;
+        grid-template-rows: 15vh 15vh ;
+        grid-template-areas: ". seven ." ". eight .";
+    }
+
+    .footer {
+        grid-template-columns: 5px 2fr 5px;
+        grid-template-rows: 15vh 15vh 17vh;
+        grid-template-areas: ". nine ." ". ten ." ". eleven .";
+    }
+}
