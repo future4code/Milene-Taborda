@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Roboto|Sacramento|Quicksand&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.imgone {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    margin: 5% 10% 0 10%;
+    font-size: 45px;
+}
+
+h5 {
+    font-size: 15px;
+    width: 30%;
+    text-align: center;
+    margin: 2% 12% 8% 12%;
+    font-family: "Quicksand", cursive;
+}
+
+h3 {
+    margin: 0 3% 2%;
+    font-family: "Roboto";
+}
+
+p {
+    width: 60%;
+}
+
+p, li {
+    font-size: 15px;
+    margin: 1% 4%;
+    text-align: justify;
+}
+
+
+.imgtwo, .imgtree {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+}
+
+.imgtree {
+    margin-left: 38%;
+}
+.imgfor {
+    position: absolute;
+    height: 300px;
+    margin-left: 76%;
+}
+
+.imagem{
+    margin: 3%;
+}
+.previous {
+    position: absolute;
+    width: 3%;
+    margin-left: 2%;
+    top: 2%;
+}
+
+.omnistack {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    margin-left: 20%;
+}
+
+.ft4 {
+    background:#150836;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+#ft4 {
+    top: 195vh;
+}
+
+#o10 {
+    top: 170vh;
+}
+
+.ft4 p {
+    text-align: center;
+    width: 250px;
+    color: #938aaa;
+    border-top: 1px solid #938aaa;
+    margin: 3% 40%;
+}
