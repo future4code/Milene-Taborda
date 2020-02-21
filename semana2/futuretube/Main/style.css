@@ -1,0 +1,46 @@
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    max-width: 20vw auto;
+}
+
+div span{
+   display: flex;
+   justify-content: center; 
+   color: #eee;
+}
+
+section div img{
+    width: 20vw;
+} 
+
+section div {             
+    margin: 5px auto;
+    border: 1px solid saddlebrown;
+    padding-bottom: 15px;  
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh;
+        display: block;
+    }
+    section div img {
+        width: 75vw;
+    }
+    section div {
+        margin: 15px auto;
+        width: 75vw;
+    }
+    header>input {
+        width: 30vw;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+

@@ -1,0 +1,31 @@
+h3 {
+    color: #eee;
+    margin: 30px auto;
+}
+
+main {
+    padding: 0 28vw;
+}
+
+video {
+    width: 45vw;
+    height: 53vh;
+    outline: none;
+}
+
+@media screen and (max-width: 850px) {
+   h3 {
+       display: flex;
+       justify-content: center;
+   }
+   
+    main {
+        padding: 0 7px;
+    }
+
+    video {
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
