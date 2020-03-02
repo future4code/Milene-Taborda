@@ -102,18 +102,18 @@ VII.  1
 
 // FAHRENHEIT => KELVIN 
 const kelvin = (77 - 32)*5/9 + 273.15
-console.log(kelvin)  //Resultado: 298.15
+console.log("77ºF = " + kelvin + "K")  //Resultado: 77ºF = 298.15K
 
 
 // CELSIUS => FAHRENHEIT
 const fahrenheit = (80*1.8)+32
-console.log(fahrenheit) //Resultado 176
+console.log("80ºC = " + fahrenheit + "ºF") //Resultado: 80ºC = 176ºF
 
 
 // CELSIUS => FAHRENHEIT && KELVIN 
 const fahrenheit1 = (30*1.8)+32
 const kelvin1 = 30+273.15
-console.log("FAHRENHEIT: " + fahrenheit1 + " KELVIN: " + kelvin1) //Resultado: FAHRENHEIT: 86 KELVIN: 303.15
+console.log("30ºC = " + fahrenheit1 + "ºF e " + kelvin1+ "K") //Resultado: 30ºC = 86ºF e 303.15K
 
 
 //CELSIUS => FAHRENHEIT && KELVIN 
@@ -121,7 +121,7 @@ const celsius = Number(prompt("Informe o Celsius"))
 const fahrenheit2 = (celsius*1.8)+32
 
 const kelvin2 = (celsius+273.15)
-console.log("FAHRENHEIT: " + fahrenheit2 + " KELVIN: " + kelvin2) //Resultado: FAHRENHEIT: 86 KELVIN: 303.15 
+console.log( celsius +"ºC = " + fahrenheit2 + "ºF e " + kelvin2 + "K") //Resultado: FAHRENHEIT: 86 KELVIN: 303.15 
 
 
 //ATIVIDADE 2
@@ -153,18 +153,15 @@ O que mais gosta da cidade: gastronomia */
 //ATIVIDADE 3
 
 const Kwh = Number(prompt("Informe o consumo de energia em Quilowatts"));
-const salario = Number(prompt("Informe o valor do salário"));
 const desconto = Number(prompt("Informe a porcentagem de desconto. Desconsidere o sinal (%)"));
 
 const a = Kwh*0.05;
 const b = (desconto*a)/100;
 const c = a - b;
-const d = salario - c;
 
 console.log("KWH em Real: R$" + a ); //Resultado: KWH em Real: R$14
 console.log("Desconto: R$" + b ); //Resultado: Desconto: R$2.1
-console.log("Total: R$" + c ); //Resultado: Total: R$11.9
-console.log("Total salário: " + d); //Resultado: Total salário: 986.1
+console.log("Total a pagar: R$" + c ); //Resultado: Total: R$11.9
 
 
 /***********  DESAFIO ***********/
