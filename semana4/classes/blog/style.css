@@ -15,6 +15,8 @@ body {
     width: 420px;
     padding: 40px;
     text-align: center;
+    box-shadow: 2px 5px 5px rgba(54, 54, 54, 0.623);
+    margin-bottom: 15px;
 }
 
 #container-form-blog h1 {
@@ -29,7 +31,6 @@ body {
     padding: 10px 25px;
     border-radius: 2px;
     border: 0;
-    transition: 0.25s;
 }
 
 #container-form-blog  input[type = "submit"] {
@@ -42,5 +43,14 @@ body {
     background: #8b8b8b;
     color: whitesmoke;
     font-weight: 500;
+}
+
+#new-post-published {
+    background: rgba(165, 42, 42, 0.527);
+    padding: 15px;
+    width: 420px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 5px;
 }
 

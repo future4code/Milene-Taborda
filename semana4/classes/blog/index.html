@@ -7,14 +7,19 @@
     <script src="script.js" defer ></script>
     <title>Document</title>
 </head>
-<body>
-    <form id="container-form-blog">
+<body onkeydown="onKeyDown(event)">
+
+    <form id="container-form-blog" action="#">
         <h1>Blog Future4</h1>
         <input id="input-title" type="text" placeholder="Título">
         <input id="input-autor" type="text" placeholder="Autor">
         <input id="input-content" type="text" placeholder="Conteúdo">
         <input id="add-blog" onclick="addPostBlog()" type="submit" value="Criar">
     </form>
-    <div id="new-post"></div>
+
+    <section id="new-post">
+
+    </section>
+
 </body>
 </html>
