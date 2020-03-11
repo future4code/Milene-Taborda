@@ -13,7 +13,8 @@
         <h1>Blog Future4</h1>
         <input id="input-title" type="text" placeholder="Título">
         <input id="input-autor" type="text" placeholder="Autor">
-        <input id="input-content" type="text" placeholder="Conteúdo">
+        <textarea id="input-content" type="text" placeholder="Conteúdo"></textarea>
+        <input id="input-image" onkeydown="onKeyDownInput(event)" type="text" placeholder="Link imagem (opcional)">
         <input id="add-blog" onclick="addPostBlog()" type="submit" value="Criar">
     </form>
 
