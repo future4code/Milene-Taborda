@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<main id="main-container-expense">
+    <form action="#">
+        <h1>Controle de Despesas</h1>
+        <h3>Cadastrar despesa</h3>
+
+        <label>Valor: </label>
+        <input id="input-value" placeholder="Insira o valor"> 
+        <br><br>
+    
+        <label>Tipo de gasto:</label>
+
+        <select id="select-expense-type">
+            <option>Casa</option>
+            <option>Viagem</option>
+            <option>Rolês</option>
+            <option>Outros</option>
+        </select> 
+        <br><br>
+        
+        <label>Descrição</label>
+        <textarea type="text" id="input-description" placeholder="Descrição"></textarea>
+        <br><br>
+
+        <button onclick="registerExpense()">Cadastrar Despesa</button>
+    </form>
+
+
+    <section id="filter-expense">
+        <h1>Despesas Detalhadas</h1>
+
+        <label>Tipo de gasto: </label>
+        <select id="select-expense-type">
+            <option value="casa">Casa</option>
+            <option value>Viagem</option>
+            <option value="">Rolês</option>
+            <option>Outros</option>
+        </select> 
+        <br><br>
+
+        <label>Valor Mínimo: </label>
+        <input id="min-value" placeholder="Valor Mínimo">
+        <br><br>
+
+        <label>Valor Máximo: </label>
+        <input id="max-value" placeholder="Valor Máximo"> 
+        <br><br>
+
+        <button id="filter-button" onclick="filterExpense()">Filtrar</button>
+        <button id="clean-filter">Limpar Filtragem</button>
+    </section>
+
+    <section id="extract-expense">
+        <h1>Extrato</h1>
+    </section>
+</main>
+</body>
+</html>
