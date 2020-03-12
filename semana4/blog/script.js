@@ -16,6 +16,10 @@ function addPostBlog() {
         
     const newPost = new Post(titleBlog, autorBlog, contentBlog);
     arrPost.push(newPost);
+    titleBlog.value = ""
+    autorBlog.value = ""
+    contentBlog.value = ""
+
    
    const containerPost = document.getElementById("new-post");
    
@@ -49,6 +53,7 @@ function onKeyDownInput(e) {
       ) {
         const image = document.getElementById("new-post-published");
         image.innerHTML += "<img id='imgPost' src='" + e.target.value + "'>";
+        e.target.value = "";
       } 
     }
   }
