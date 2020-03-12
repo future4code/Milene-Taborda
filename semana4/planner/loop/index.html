@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="index.js" defer></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+
+  <header>
+    <form id="container-addPlanner">
+      <input id="input" type="text" placeholder="Nova tarefa">
+      <select id="select">
+        <option>Segunda-feira</option>
+        <option>Terça-feira</option>
+        <option>Quarta-feira</option>
+        <option>Quinta-feira</option>
+        <option>Sexta-feira</option>
+        <option>Sábado</option>
+        <option>Domingo</option>
+      </select>
+      <button id="button" type="button" onclick="addPlanner()">Adicionar</button>
+  </form>
+</header>
+
+  <main class="container-planner">
+    <div id="planner" >
+   <ul id="seg"><h5>Segunda-feira</h5></ul>
+   <ul id="ter"><h5>Terça-feira</h5></ul>
+   <ul id="qua"><h5>Quarta-feira</h5></ul>
+   <ul id="qui"><h5>Quinta-feira</h5></ul>
+   <ul id="sex"><h5>Sexta-feira</h5></ul>
+   <ul id="sab"><h5>Sábado</h5></ul>
+   <ul id="dom"><h5>Domingo</h5></ul>
+  </div>
+  </main>
+    
+  </body>
+</html>
