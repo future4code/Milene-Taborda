@@ -6,13 +6,12 @@ import comprarCarta from './naoMexer.js'
     let cartaComputador1 = comprarCarta();
     let cartaComputador2 = comprarCarta();
 
-    let pontuaçãoUsuario = cartaUsuario1.valor + cartaUsuario2.valor;
-    let pontuaçãoComputador = cartaComputador1.valor + cartaComputador2.valor;
+    let pontuacaoUsuario = cartaUsuario1.valor + cartaUsuario2.valor;
+    let pontuacaoComputador = cartaComputador1.valor + cartaComputador2.valor;
 
 
     if(confirm("Quer iniciar uma nova rodada?")) {
       console.log("Bem vindo ao jogo de Blackjack!");
-
       while(cartaUsuario2.texto[0] === "A" && cartaUsuario1.texto[0] === "A" || cartaComputador1[0] === "A" && cartaComputador2[0] === "A") {
         cartaUsuario1 = comprarCarta(); 
         cartaUsuario2 = comprarCarta();
@@ -20,8 +19,8 @@ import comprarCarta from './naoMexer.js'
         cartaComputador1 = comprarCarta();
         cartaComputador2 = comprarCarta();
     
-        pontuaçãoUsuario = cartaUsuario1.valor + cartaUsuario2.valor;
-        pontuaçãoComputador = cartaComputador1.valor + cartaComputador2.valor;
+        pontuacaoUsuario = cartaUsuario1.valor + cartaUsuario2.valor;
+        pontuacaoComputador = cartaComputador1.valor + cartaComputador2.valor;
     } 
 
     if(confirm(
@@ -29,18 +28,18 @@ import comprarCarta from './naoMexer.js'
         "\n"+  
         "Deseja comprar mais uma carta?"
     )) {
-        if (pontuaçãoUsuario === pontuaçãoComputador || pontuaçãoUsuario > 21 && pontuaçãoComputador > 21) {
+        if (pontuacaoUsuario === pontuacaoComputador || pontuacaoUsuario > 21 && pontuacaoComputador > 21) {
             console.log("Empate!")
-          } else if (pontuaçãoUsuario <= 21 && pontuaçãoComputador <= 21) {
-            if (pontuaçãoUsuario > pontuaçãoComputador) {
-              console.log("O usuário ganhou! Pontuação: ", pontuaçãoUsuario);
+          } else if (pontuacaoUsuario <= 21 && pontuacaoComputador <= 21) {
+            if (pontuacaoUsuario > pontuacaoComputador) {
+              console.log("O usuário ganhou! Pontuação: ", pontuacaoUsuario);
             } else {
-              console.log("O Computador ganhou! Pontuação: ", pontuaçãoComputador);
+              console.log("O Computador ganhou! Pontuação: ", pontuacaoComputador);
             }
-          } else if (pontuaçãoUsuario > 21) {
-            console.log("O Computador ganhou! Pontuação: ", pontuaçãoComputador);
+          } else if (pontuacaoUsuario > 21) {
+            console.log("O Computador ganhou! Pontuação: ", pontuacaoComputador);
           } else {
-            console.log("O usuário ganhou! Pontuação: ", pontuaçãoUsuario);
+            console.log("O usuário ganhou! Pontuação: ", pontuacaoUsuario);
           }
         
         }
