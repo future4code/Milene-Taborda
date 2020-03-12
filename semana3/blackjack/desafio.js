@@ -1,49 +1,49 @@
 import comprarCarta from './naoMexer.js'
 
-    let usuario = comprarCarta(); 
-    let cartaUser = comprarCarta();
+    let cartaUsuario1 = comprarCarta(); 
+    let cartaUsuario2 = comprarCarta();
     
-    let computador = comprarCarta();
-    let cartaComp = comprarCarta();
+    let cartaComputador1 = comprarCarta();
+    let cartaComputador2 = comprarCarta();
 
-    let soma1 = usuario.valor + cartaUser.valor;
-    let soma2 = computador.valor + cartaComp.valor;
+    let pontuaçãoUsuario = cartaUsuario1.valor + cartaUsuario2.valor;
+    let pontuaçãoComputador = cartaComputador1.valor + cartaComputador2.valor;
 
 
     if(confirm("Quer iniciar uma nova rodada?")) {
       console.log("Bem vindo ao jogo de Blackjack!");
 
-      while(cartaUser.texto[0] === "A" && usuario.texto[0] === "A" || computador[0] === "A" && cartaComp[0] === "A") {
-        usuario = comprarCarta(); 
-        cartaUser = comprarCarta();
+      while(cartaUsuario2.texto[0] === "A" && cartaUsuario1.texto[0] === "A" || cartaComputador1[0] === "A" && cartaComputador2[0] === "A") {
+        cartaUsuario1 = comprarCarta(); 
+        cartaUsuario2 = comprarCarta();
         
-        computador = comprarCarta();
-        cartaComp = comprarCarta();
+        cartaComputador1 = comprarCarta();
+        cartaComputador2 = comprarCarta();
     
-        soma1 = usuario.valor + cartaUser.valor;
-        soma2 = computador.valor + cartaComp.valor;
+        pontuaçãoUsuario = cartaUsuario1.valor + cartaUsuario2.valor;
+        pontuaçãoComputador = cartaComputador1.valor + cartaComputador2.valor;
     } 
 
     if(confirm(
-        "Suas cartas são " +usuario.valor+ " " +cartaUser.valor+ ". A carta revelada do computador é " +computador.texto+ " ." +
+        "Suas cartas são " +cartaUsuario1.valor+ " " +cartaUsuario2.valor+ ". A carta revelada do cartaComputador1 é " +cartaComputador1.texto+ " ." +
         "\n"+  
         "Deseja comprar mais uma carta?"
     )) {
-        if (soma1 === soma2 || soma1 > 21 && soma2 > 21) {
+        if (pontuaçãoUsuario === pontuaçãoComputador || pontuaçãoUsuario > 21 && pontuaçãoComputador > 21) {
             console.log("Empate!")
-          } else if (soma1 <= 21 && soma2 <= 21) {
-            if (soma1 > soma2) {
-              console.log("O usuário ganhou! Pontuação: ", soma1);
+          } else if (pontuaçãoUsuario <= 21 && pontuaçãoComputador <= 21) {
+            if (pontuaçãoUsuario > pontuaçãoComputador) {
+              console.log("O usuário ganhou! Pontuação: ", pontuaçãoUsuario);
             } else {
-              console.log("O computador ganhou! Pontuação: ", soma2);
+              console.log("O Computador ganhou! Pontuação: ", pontuaçãoComputador);
             }
-          } else if (soma1 > 21) {
-            console.log("O computador ganhou! Pontuação: ", soma2);
+          } else if (pontuaçãoUsuario > 21) {
+            console.log("O Computador ganhou! Pontuação: ", pontuaçãoComputador);
           } else {
-            console.log("O usuário ganhou! Pontuação: ", soma1);
+            console.log("O usuário ganhou! Pontuação: ", pontuaçãoUsuario);
           }
         
         }
     } else {
-        alert("O computador ganhou!");
+        alert("O Computador ganhou!");
     }
