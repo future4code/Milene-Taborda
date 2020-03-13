@@ -73,3 +73,14 @@ function programaDoisNumeros(a, b) {
 
 programaDoisNumeros(11, 2)
 */
+
+/* Exercícios de Funções */
+//Exercício 1 
+
+
+//Exercício 2
+function helloWorld() {
+alert("Hello Future4");
+};
+
+helloWorld();
