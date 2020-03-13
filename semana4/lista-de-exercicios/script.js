@@ -23,3 +23,14 @@
 // c => true
 // d => true
 // e => true
+
+//Exercício 3 - Não, pois houve um erro na condição em si, havendo assim um loop infinito, já que a pessoa esqueceu do i++ ao final do while
+
+/*
+const quantidadeDeNumerosPares
+let i = 0
+while(i < quantidadeDeNumerosPares) {
+  console.log(i*2)
+  i++
+}
+*/
