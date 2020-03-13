@@ -163,4 +163,25 @@ const idadeInfAVinteAnos = pessoas.filter((pessoa, idx, arr) => {
     return pessoa.idade < 20;
 });
 
+
+//Exercício 2
+const array = [1, 2, 3, 4, 5, 6];
+
+const arrayMultDois = array.map(num => {
+    return num * 2;
+});
+
+const arrayMulTres = array.map(num => {
+    return `${num * 3}`;
+});
+
+const arrayParImpar = array.map(num => {
+    if(num % 2 === 0) {
+        return `O numero ${num} é par`
+    }else {
+        return `O numero ${num} é impar`
+    }
+});
+
+console.log(arrayMultDois)
 */
