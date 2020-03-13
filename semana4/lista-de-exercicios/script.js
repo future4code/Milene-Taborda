@@ -16,3 +16,10 @@
 
 /* Exercícios de Lógica de programção*/
 //Exercício 1 - array.forEach(); array.map(); array.filter().
+
+//Exercício 2 
+// a => false
+// b => false
+// c => true
+// d => true
+// e => true
