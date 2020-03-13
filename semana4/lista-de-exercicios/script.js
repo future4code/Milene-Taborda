@@ -49,3 +49,27 @@ function validarForma(a, b, c){
 
 validarForma(4, 5, 6);
 */
+
+//Exercício 5
+/*
+function programaDoisNumeros(a, b) {
+    const subtNumeros = (-a) / (-b);
+    if( a === b){
+        console.log("Os números são iguais!")
+    }else if(a < b ) {
+        console.log("O número " ,a, " é menor que " ,b)
+    } else {
+        console.log("O número " ,a, " é maior que " ,b)
+    }
+
+    if (a % b === 0) {
+        console.log(a, " é divisível por " ,b)
+    } else {
+        console.log(a, " não é divisível por ",b)
+    }
+
+    console.log("A diferença entres eles é " ,subtNumeros);
+}
+
+programaDoisNumeros(11, 2)
+*/
