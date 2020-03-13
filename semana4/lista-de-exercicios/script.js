@@ -79,8 +79,16 @@ programaDoisNumeros(11, 2)
 
 
 //Exercício 2
+/*
 function helloWorld() {
 alert("Hello Future4");
 };
 
 helloWorld();
+*/
+
+/* Exercícios de Objetos */
+//Exercício 1
+//Array [] é uma variavel que utilizamos para guardar uma sequencia de dados, lista, objetos etc..
+//Objeto {} é uma coleção de propriedade, podemos usá-lo, por exemplo, para guardar um endereço, nome, cep etc..
+
