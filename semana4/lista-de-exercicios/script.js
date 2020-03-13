@@ -9,3 +9,7 @@
 //2º console => 7
 //3º console => 7
 
+//Exercício 4 - Verificação do maior e do menor número dentro do array números, para cada numero dentro do array número faça o seguinte, percorra o array e se o numero for a menor do array armazene dentro da variavel numero1, e se o for o maior numero do array, armazene na variavel2. 
+//1º console => -18
+//2º console => 1599
+
