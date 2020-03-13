@@ -129,6 +129,7 @@ console.log("Venha assistir ao filme " +filme.titulo + ", de " + filme.ano + ", 
 */
 
 //Exercício 4
+/*
 const infosPessoa1 = {
     nome: "Ada Lovelace",
     idade: "0",
@@ -140,6 +141,26 @@ const infosPessoa1 = {
     ...infosPessoa1 ,
       nome: "Anônimo"
   }
-  
+*/
 
-  
+
+/* Exercícios de Funções de array*/
+//Exercício 1
+/*
+const pessoas = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+
+const idadeSupAVinteAnos = pessoas.filter((pessoa, idx, arr) => {
+     return pessoa.idade >= 20;
+});
+
+const idadeInfAVinteAnos = pessoas.filter((pessoa, idx, arr) => {
+    return pessoa.idade < 20;
+});
+
+*/
