@@ -1,4 +1,4 @@
-/* Exercício de interpretação de código*/
+/* Exercícios de interpretação de código */
 
 //Exercício 1 - Função que realiza a conversão do valor inserido no console de acordo com o valor da cotação em dólares passada no console. Resultado: 21,46
 
@@ -11,5 +11,8 @@
 
 //Exercício 4 - Verificação do maior e do menor número dentro do array números, para cada numero dentro do array número faça o seguinte, percorra o array e se o numero for a menor do array armazene dentro da variavel numero1, e se o for o maior numero do array, armazene na variavel2. 
 //1º console => -18
-//2º console => 1599
+//2º console => 1590
 
+
+/* Exercícios de Lógica de programção*/
+//Exercício 1 - array.forEach(); array.map(); array.filter().
