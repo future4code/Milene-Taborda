@@ -106,7 +106,8 @@ const criarRetângulo = (lado1, lado2) => {
   };
 */
 
-//Exercício 3
+//Exercício 3 
+/*
 const filme = {
     titulo: "John Wick - De Volta Ao Jogo",
     ano: 2014,
@@ -125,3 +126,20 @@ const filme = {
   };
 
 console.log("Venha assistir ao filme " +filme.titulo + ", de " + filme.ano + ", dirigido por " +filme.diretor +"e estrelado por " +filme.atores.join(", "));
+*/
+
+//Exercício 4
+const infosPessoa1 = {
+    nome: "Ada Lovelace",
+    idade: "0",
+    email: "adalovelace@gmail.com",
+    endereco: "R. Estelar"
+  };
+
+  const infosPessoa2 = {
+    ...infosPessoa1 ,
+      nome: "Anônimo"
+  }
+  
+
+  
