@@ -92,3 +92,13 @@ helloWorld();
 //Array [] é uma variavel que utilizamos para guardar uma sequencia de dados, lista, objetos etc..
 //Objeto {} é uma coleção de propriedade, podemos usá-lo, por exemplo, para guardar um endereço, nome, cep etc..
 
+/*
+const criarRetângulo = (lado1, lado2) => {
+    return {
+      lado1: lado1,
+      lado2: lado2,
+      perimetro: 2 * (lado1 + lado2),
+      area: lado1 * lado2
+    };
+  };
+*/
