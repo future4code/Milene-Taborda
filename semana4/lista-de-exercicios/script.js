@@ -34,3 +34,18 @@ while(i < quantidadeDeNumerosPares) {
   i++
 }
 */
+
+//Exercício 4 
+/*
+function validarForma(a, b, c){
+    if ( a == b && b == c){
+        console.log("Triângulo Equilátero");      
+    }else if(a != b && b != c && c != a){
+        console.log("Triângulo Escaleno!"); 
+    }else{
+        console.log("Triângulo Isósceles");
+    }
+}
+
+validarForma(4, 5, 6);
+*/
