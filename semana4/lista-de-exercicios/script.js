@@ -4,3 +4,8 @@
 
 //Exercício 2 - Função para realização de investimento, abaixo há uma verificação a partir da entrada de "valor/tipo" de investimento realizado, cada case há um tipo de rendimento diferente. Entretanto, se não houver nenhuma entrada de "valor/tipo", aparece um alerta na tela. Resultado: 1º console => 165; 2º console => alerta: Tipo de investimento informado incorreto!
 
+//Exercício 3 - Verifica se o numero é par ou impar e imprime na tela o tamanho do array depois da validação da condição. Para cada numero dentro do array números, se retornar um número par o array1 irá armazenar se não o array2 irá armazenar. 
+//1º console => Quantidade total de números 13
+//2º console => 7
+//3º console => 7
+
