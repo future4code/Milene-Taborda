@@ -27,11 +27,13 @@
 //Exercício 3 - Não, pois houve um erro na condição em si, havendo assim um loop infinito, já que a pessoa esqueceu do i++ ao final do while
 
 /*
-const quantidadeDeNumerosPares
+function numerosPares(numero) {
+const quantidadeDeNumerosPares = numero
 let i = 0
 while(i < quantidadeDeNumerosPares) {
   console.log(i*2)
   i++
+}
 }
 */
 
@@ -93,6 +95,7 @@ helloWorld();
 //Objeto {} é uma coleção de propriedade, podemos usá-lo, por exemplo, para guardar um endereço, nome, cep etc..
 
 /*
+//Exercício 2
 const criarRetângulo = (lado1, lado2) => {
     return {
       lado1: lado1,
@@ -102,3 +105,23 @@ const criarRetângulo = (lado1, lado2) => {
     };
   };
 */
+
+//Exercício 3
+const filme = {
+    titulo: "John Wick - De Volta Ao Jogo",
+    ano: 2014,
+    diretor: ["Chad Stahelski", "David Leitch"],
+    atores: [
+      "Keanu Reeves",
+      "Michael Nyqvist",
+      "Alfie Allen",
+      "Adrianne Palicki",
+      "Bridget Moynahan",
+      "Dean Winters",
+      "Ian McShane",
+      "John Leguizamo",
+      "Willem Dafoe",
+    ]
+  };
+
+console.log("Venha assistir ao filme " +filme.titulo + ", de " + filme.ano + ", dirigido por " +filme.diretor +"e estrelado por " +filme.atores.join(", "));
