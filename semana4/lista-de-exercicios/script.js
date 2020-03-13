@@ -184,7 +184,7 @@ const arrayParImpar = array.map(num => {
 });
 
 console.log(arrayMultDois)
-*/
+
 
 const pessoas = [
 	{ nome: "Paula", idade: 12, altura: 1.8},
@@ -205,4 +205,22 @@ const pessoasComPermissao = pessoas.filter(pessoa => {
       return true;
   });
 
-  console.log(pessoasSemPermissao)
+  
+
+ const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const email = consultas.map((pessoa) => {
+    return (
+        "Olá, " + (pessoa.genero === "feminino" ? "Sra. " : "Sr. ") +
+        pessoa.nome + (pessoa.cancelada ? ". Infelizmente, sua consulta marcada para o dia " + pessoa.dataDaConsulta +" foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la": ". Estamos enviando esta mensagem para lembra-" +
+            (pessoa.genero === "feminino" ? "la " : "lo ") + "da sua consulta no dia " +
+            pessoa.dataDaConsulta +". Por favor, acuse o recebimento deste e-mail.")
+      );
+})
+
+*/
