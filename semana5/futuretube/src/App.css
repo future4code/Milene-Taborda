@@ -1,0 +1,43 @@
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) ;
+  margin-left: 200px;
+}
+
+div span{
+ display: flex;
+ justify-content: center; 
+ color: rgb(0, 0, 0);
+}
+
+section div img{
+  width: 100%;
+} 
+
+section div {          
+  margin: 6vh 1vw;
+  border: none;
+}
+
+@media screen and (max-width: 500px) {
+  section {
+      grid-template-columns: 1fr;
+      grid-template-rows: 20vh;
+      display: block;
+  }
+  section div img {
+      width: 75vw;
+  }
+  section div {
+      margin: 15px auto;
+      width: 75vw;
+  }
+  header>input {
+      width: 30vw;
+  }
+
+  footer {
+      position: relative;
+  }
+}
