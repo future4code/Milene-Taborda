@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background: #2f313609;
+    color: #131313;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    background: #fff;
+}
+
+.container-header {
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search input {
+    margin: 20px ;
+    padding: 3px;
+    width: 30vw;
+}
+
+.container-header h1 {
+    color:  rgb(238, 119, 0);
+    margin: 0;
+}
+
+.container-header h1 i {
+    color: rgb(238, 119, 0);
+}
+
+.fas.fa-bars {
+    position: absolute;
+    left: 4vw;
+    top: 2.5vh;
+    font-size: 20px;
+}
+
+.container-header h6 {
+    background: rgba(122, 122, 122, 0.664);
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border-radius: 50%;
+}
+
+.navbar {
+    background-color: #fff;
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+}
+
+.navbar ul li a{
+    color: #131313;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+.navbar li {
+    padding: 15px 35px;
+}
+.navbar ul {
+    margin-top: 25px;
+}
+.navbar li:nth-of-type(5){
+    border-top: 1px solid rgba(82, 82, 82, 0.431);
+}
+
+
+section {
+    padding: 15px 60px;
+}
+
+footer {
+    background: #fff;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    color: rgb(7, 7, 7);
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+}
+
+img.future {
+    margin-left: 5vw;
+    width: 65px;
+}
+
+h1 {
+    
+    margin: 1vw 10vw;
+    color: #eee;
+    font-size: 40px;
+}
+
+
+@media screen and (max-width: 1360px) {
+    .navbar {
+        height: 60vh;
+    }
+}
