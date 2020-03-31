@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "d264515d-cb65-4b14-a1d9-acff4a08d090",
+		"name": "Playlists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createPlaylists",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth",
+						"value": "milene-taborda-desafio",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Rock And Roll\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-future-apis.cloudfunctions.net/spotifour/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-future-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"spotifour",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSongToPlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth",
+						"type": "text",
+						"value": "milene-taborda"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Musica 7 (Exclua-me)\" , \r\n    \"artist\": \"Anônimo\",\r\n    \"url\": \"https://open.spotify.com/playlist/37i9dQZF1DX4jCqmsDQR1i\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-future-apis.cloudfunctions.net/spotifour/playlists/:playlistId/songs",
+					"protocol": "https",
+					"host": [
+						"us-central1-future-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"spotifour",
+						"playlists",
+						":playlistId",
+						"songs"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "374563f6-7130-4f8a-9fd3-cddfee14560e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlaylists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "milene-taborda-desafio",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-future-apis.cloudfunctions.net/spotifour/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-future-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"spotifour",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPlaylistSongs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "milene-taborda",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-future-apis.cloudfunctions.net/spotifour/playlists/:playlistId/songs",
+					"protocol": "https",
+					"host": [
+						"us-central1-future-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"spotifour",
+						"playlists",
+						":playlistId",
+						"songs"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "374563f6-7130-4f8a-9fd3-cddfee14560e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "milene-taborda",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-future-apis.cloudfunctions.net/spotifour/playlists/search?name=Metal Empire",
+					"protocol": "https",
+					"host": [
+						"us-central1-future-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"spotifour",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Metal Empire"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth",
+						"value": "milene-taborda-desafio",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-future-apis.cloudfunctions.net/spotifour/playlists/:playlistId\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-future-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"spotifour",
+						"playlists",
+						":playlistId\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId\n",
+							"value": "568a892a-653d-4923-9bdb-c87398dd3846"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeSongFromPlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth",
+						"value": "milene-taborda",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-future-apis.cloudfunctions.net/spotifour/playlists/:playlistId/songs/:songId",
+					"protocol": "https",
+					"host": [
+						"us-central1-future-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"spotifour",
+						"playlists",
+						":playlistId",
+						"songs",
+						":songId"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "374563f6-7130-4f8a-9fd3-cddfee14560e"
+						},
+						{
+							"key": "songId",
+							"value": "9872dd8a-b354-4d3b-8a7a-30d06ec6c473"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
