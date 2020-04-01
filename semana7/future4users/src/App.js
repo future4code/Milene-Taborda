@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import './App.css';
 import CreateUsers from './components/CreateUsers';
-import ListUsers from './components/ListUsers'
-
+import ListUsers from './components/ListUsers';
+import DetailsUser from './components/DetailsUser'
 
 class App extends Component {
 state = {
-  
-  tela: 'inicial'
+  tela: 'inicial', 
 }
 
 onClickInicial = () => {
@@ -18,6 +18,10 @@ onClickLista = () => {
   this.setState({ tela: "lista" });
 };
 
+onClickDetails = () => {
+  this.setState({ tela: "detalhes" });
+};
+
   render() {
     let tela;
     switch (this.state.tela) {
@@ -25,17 +29,22 @@ onClickLista = () => {
         tela = (<CreateUsers onClickLista={this.onClickLista} />);
         break;
       case "lista":
-        tela = ( <ListUsers onClickLogin={this.onClickInicial} /> );
+        tela = ( <ListUsers onClickLogin={this.onClickInicial} onClickDetails={this.onClickDetails}  /> );
         break;
+        case "detalhes":
+          tela = ( <DetailsUser onClickLista={this.onClickLista}  /> );
+          break;
         default:
     }
 
     return (
-      <div className="App">
+      <Container>
         {tela}
-      </div>
+      </Container>
     );
   }
 }
+
+const Container = styled.div``
 
 export default App;
