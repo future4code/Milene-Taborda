@@ -20,6 +20,7 @@ export default class CreatePlaylist extends Component {
               auth: "milene-hamilton"
             }
         }).then(() => {
+            this.setState({ InputValueNewPlaylist: "" })
             window.alert('Playlist criada com sucesso!')
         }).catch((err) => {
             alert("Playlist já existente!")

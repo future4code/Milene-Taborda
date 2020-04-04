@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import CreatePlaylist from './components/CreatePlaylist/CreatePlaylist';
 import ListAllPlaylists from './components/ListAllPlaylists/ListAllPlaylists';
-import DetailsPlaylist from './components/DetailsPlaylist'
+import DetailsPlaylist from './components/DetailsPlaylist/DetailsPlaylist';
 
 
 export default class App extends Component {
@@ -58,14 +58,16 @@ export default class App extends Component {
       <Container>
 
       <ConatinerNavbar>
-        <ContainerNavBar>
-          <ItemNavBar >Inicio</ItemNavBar >
-  
-          <ItemNavBar  onClick={this.onClickCreatePlaylist} >Criar Playlist</ItemNavBar > 
-  
-          <ItemNavBar  onClick={this.onClickListAllPlaylist}>Sua biblioteca</ItemNavBar >
 
+      <Span><i class="fas fa-user-astronaut"> </i> SPOTIF4 - HAMILTON</Span>
+
+        <ContainerNavBar>
+          <ItemNavBar ><i class="fas fa-home"></i> Inicio</ItemNavBar >
+          <ItemNavBar  onClick={this.onClickListAllPlaylist}> <i class="fas fa-book-open"></i> Sua biblioteca</ItemNavBar >
         </ContainerNavBar>
+         
+          <AddPlaylist onClick={this.onClickCreatePlaylist}> <i class="fas fa-plus"></i> Criar Playlist</AddPlaylist> 
+      
       </ConatinerNavbar>
 
         <div>
@@ -76,7 +78,12 @@ export default class App extends Component {
     );
   }
 }
-
+const AddPlaylist = styled.div`
+  background: #363636;
+  margin-top: 25px;
+  padding: 15px 35px;
+  cursor: pointer;
+`
 
 const Container = styled.div`
   background: #131313;
@@ -88,16 +95,21 @@ const Container = styled.div`
 
 const ContainerNavBar = styled.ul`
   list-style-type: none;
-  margin-top: 55px;
+  border-top: 1px solid #363636;
 `
 const ItemNavBar = styled.li`
-  margin: 25px 0;
+  margin: 30px 0;
   cursor: pointer;
 `
+
 
 const ConatinerNavbar = styled.div`
   height: 100vh;
   width: 20vw;
   background: black;
  
+`
+const Span = styled.div`
+  font-size: 25px;
+  padding: 25px 10px;
 `

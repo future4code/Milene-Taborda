@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
-
-
 // import { Container } from './styles';
 
 const baseURL = "https://us-central1-future-apis.cloudfunctions.net/spotifour";
@@ -37,7 +35,8 @@ export default class ListAllPlaylists extends Component {
             }, 
        }
     ).then(() => {
-        alert('deu')
+        alert("Tem certeza que deseja deletar a Playlist?");
+       this.ListAllPlaylists();
     }).catch(() => {
         alert('Erro')
     });
