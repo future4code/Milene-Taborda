@@ -5,39 +5,43 @@ import styled from 'styled-components';
 import CreatePlaylist from './components/CreatePlaylist/CreatePlaylist';
 import ListAllPlaylists from './components/ListAllPlaylists/ListAllPlaylists';
 import DetailsPlaylist from './components/DetailsPlaylist/DetailsPlaylist';
+import Home from './components/Home/Home';
 
 
 export default class App extends Component {
   state = {
-    teste: 'inicial',
+    tela: 'inicial',
     idPlaylist: ''
   }
 
   onClickInicial = () => {
-    this.setState({ teste: "inicial" });
+    this.setState({ tela: "inicial" });
   };
   
   onClickCreatePlaylist = () => {
-    this.setState({ teste: "create-playlist" });
+    this.setState({ tela: "create-playlist" });
   };
   
   onClickListAllPlaylist = () => {
-    this.setState({ teste: "list-playlist" });
+    this.setState({ tela: "list-playlist" });
   };
 
   onClickSearchPlaylist = () => {
-    this.setState({ teste: "search-playlist" });
+    this.setState({ tela: "search-playlist" });
   };
 
   onClickSearchDetails = (id) => {
-    this.setState({ teste: "details", idPlaylist: id });
+    this.setState({ tela: "details", idPlaylist: id });
     console.log(this.state.idPlaylist)
   };
 
   render() {
     let tela
 
-    switch(this.state.teste) {
+    switch(this.state.tela) {
+      case 'inicial': 
+      tela = ( <Home /> )
+    break;
       case 'create-playlist': 
         tela = ( <CreatePlaylist  /> )
       break;
@@ -55,14 +59,15 @@ export default class App extends Component {
 
 
     return (
+  
       <Container>
 
       <ConatinerNavbar>
 
-      <Span><i class="fas fa-user-astronaut"> <H1> SPOTIF4</H1> </i></Span> 
+      <Span><i class="fas fa-user-astronaut"> SPOTIF4 - HAMILTON</i></Span> 
 
         <ContainerNavBar>
-          <ItemNavBar ><i class="fas fa-home"></i> Inicio</ItemNavBar >
+          <ItemNavBar onClick={this.onClickInicial}><i class="fas fa-home"></i> Inicio</ItemNavBar >
           <ItemNavBar  onClick={this.onClickListAllPlaylist}> <i class="fas fa-book-open"></i> Sua biblioteca</ItemNavBar >
         </ContainerNavBar>
          
@@ -75,19 +80,22 @@ export default class App extends Component {
         </div>
 
       </Container>
+     
     );
   }
 }
+
+
 const AddPlaylist = styled.div`
   background: #363636;
-  margin-top: 25px;
   padding: 15px 35px;
   cursor: pointer;
 `
 
 const Container = styled.div`
   background: #131313;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   color: #eee;
@@ -98,10 +106,9 @@ const ContainerNavBar = styled.ul`
   border-top: 1px solid #363636;
 `
 const ItemNavBar = styled.li`
-  margin: 30px 0;
+  margin: 40px 0;
   cursor: pointer;
 `
-
 
 const ConatinerNavbar = styled.div`
   height: 100vh;
@@ -111,8 +118,6 @@ const ConatinerNavbar = styled.div`
 `
 const Span = styled.div`
   font-size: 20px;
-  padding: 25px 10px;
+  margin: 25px;
 `
-const H1 = styled.h1 `
-  
-`
+

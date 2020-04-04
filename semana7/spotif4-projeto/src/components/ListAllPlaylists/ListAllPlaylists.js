@@ -51,7 +51,7 @@ export default class ListAllPlaylists extends Component {
                     return (
                         <>
                         <ContainerPl>
-                        <Img src={'https://lh3.googleusercontent.com/proxy/amk0zKC4xe9abb6hrv4AT4q-L0JEy09QjsTIp-u8Dug9QQMgK-bmY7pptTizCzlKM99IyYw1fIicrWP6ni2hkJUyO54in_3V_8wiXfFHh8_A_HINbgxWyekqsE7w2iUagAZl'} />
+                        <Img src={'https://i.pinimg.com/originals/f1/92/ec/f192ecd182b0c57ec8a4a97828430238.png'} />
                             <p key={index}>{playlist.name}</p>
                                 <ContainerButtons>
                                     < ButtonDelete onClick={() => 
