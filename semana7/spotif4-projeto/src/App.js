@@ -59,7 +59,7 @@ export default class App extends Component {
 
       <ConatinerNavbar>
 
-      <Span><i class="fas fa-user-astronaut"> </i> SPOTIF4 - HAMILTON</Span>
+      <Span><i class="fas fa-user-astronaut"> </i> <H1> SPOTIF4 - HAMILTON</H1></Span>
 
         <ContainerNavBar>
           <ItemNavBar ><i class="fas fa-home"></i> Inicio</ItemNavBar >
@@ -110,6 +110,8 @@ const ConatinerNavbar = styled.div`
  
 `
 const Span = styled.div`
-  font-size: 25px;
   padding: 25px 10px;
+`
+const H1 = styled.h1 `
+  font-size: 10px;
 `
