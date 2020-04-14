@@ -1,6 +1,9 @@
 import React from 'react';
-import { Container, Title, ContainerButtons, Input, Filter, List, Footer } from './Styles'
+import { Container, Title, ContainerButtons, Filter, List, Footer } from './Styles';
 import Button from '@material-ui/core/Button';
+
+import CreateTask from './components/CreateTask';
+
 
 export default function App() {
   return (
@@ -9,8 +12,7 @@ export default function App() {
       <Title>4Task</Title>
 
       <ContainerButtons>
-      <Input type="text" placeholder="O que tem que ser feito?"/> 
-
+        <CreateTask />
 
       <Footer>
         <Button>Marcar todas como completas</Button>
@@ -26,6 +28,8 @@ export default function App() {
     </Container>
   );
 }
+
+
 
 
 

@@ -18,12 +18,6 @@ width: 42.2vw;
 border: 1px solid lightgray;
 background: #eee;
 `
-export const Input = styled.input`
-  padding: 16px 16px 16px 16px;
-  border: none;
-  width: 40vw;
-  outline: none;
-`
 export const List = styled.li`
 text-align: left;
 margin: 0;

@@ -1,52 +1,61 @@
 
 
-function addTask(task) {
+export function addTask(task) {
     return {
         type: 'ADD_TASK',
         payload: {
-            newTask: task
+            newTask: task,
+            id: Date.now(),
+            complete: false
         }
     }
 }
 
-function completeTask() {
+export function completeTask(id) {
     return {
-        type: 'COMPLETE_TASK'
+        type: 'COMPLETE_TASK',
+        payload: {
+            completeTask: id,
+            complete: true
+        }
     }
 }
 
-function CompleteAll() {
+export function CompleteAll() {
     return {
         type: 'COMPLETE_ALL'
     }
 }
 
-function deleteTask() {
+export function deleteTask(id) {
     return {
-        type: 'DELETE_TASK'
+        type: 'DELETE_TASK',
+        payload: {
+            id: id
+        }
     }
 }
 
-function deleteCompleted() {
+export function deleteCompleted() {
     return {
         type: 'DELETE_COMPLETED'
     }
 }
 
-function filterAll() {
+export function filterAll() {
     return {
         type: 'FILTER_ALL',
     }
 }
 
-function filterPending() {
+export function filterPending() {
     return {
         type: 'FILTER_PENDING',
     }
 }
 
-function filterCompleted() {
+export function filterCompleted() {
     return {
-        type: 'FILTER_COMPLETED'
+        type: 'FILTER_export COMPLETED'
     }
 }
