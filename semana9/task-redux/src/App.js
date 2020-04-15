@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Title, ContainerButtons, Filter, List, Footer } from './Styles';
-import Button from '@material-ui/core/Button';
+import { Container, Title, ContainerButtons } from './Styles';
 
-import CreateTask from './components/CreateTask';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
+import ToolBar from './components/ToolBar';
 
 
 export default function App() {
@@ -12,17 +13,11 @@ export default function App() {
       <Title>4Task</Title>
 
       <ContainerButtons>
-        <CreateTask />
+     
+        <TaskForm />
+        <TaskList />
+        <ToolBar />
 
-      <Footer>
-        <Button>Marcar todas como completas</Button>
-
-        <Filter>
-        <List><Button variant='contained'>Todas</Button ></List>
-        <List><Button >Pendentes</Button></List>
-        <List><Button>Completas</Button></List>
-        </Filter>
-      </Footer>
       </ContainerButtons>
       
     </Container>

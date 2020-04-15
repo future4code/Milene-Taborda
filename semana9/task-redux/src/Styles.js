@@ -14,7 +14,7 @@ export const Title = styled.h1`
 `
 export const ContainerButtons = styled.div`
 margin: 0 auto;
-width: 42.2vw;
+width: 80vw;
 border: 1px solid lightgray;
 background: #eee;
 `
