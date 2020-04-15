@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { completeTask, deleteTask  } from '../actions/actions';
+import { completeTask, deleteTask, fetchTasks  } from '../actions/actions';
 
 class TaskList extends Component {
+
+  componentDidMount() {
+    this.props.fetchTasks();
+  }
 
   render() {
     console.log(this.props.taskList)
     return (
       <ul>
-          {this.props.taskList.filter((task) => {
+          {this.props.taskList && this.props.taskList.filter((task) => {
             const filter = this.props.filter
 
-            if(filter === 'pendentes') return task.complete === false
-            if(filter === 'completas') return task.complete === true
+            if(filter === 'pendentes') return task.done === false
+            if(filter === 'completas') return task.done === true
             return true
 
           }).map(task => (
             <li key={task.id} onClick={() => this.props.completeTask(task.id)}>
-              {task.task} - completa: {String(task.complete)} 
+              {task.text} - completa: {String(task.done)} 
               <button onClick={() => this.props.deleteTask(task.id) }>Deletar</button>
             </li>
           ))}
@@ -37,7 +41,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
  return {
   completeTask: (id) => dispatch(completeTask(id)),
-  deleteTask: (id) => dispatch(deleteTask(id))
+  deleteTask: (id) => dispatch(deleteTask(id)),
+  fetchTasks: () => dispatch(fetchTasks())
  }
 };
  

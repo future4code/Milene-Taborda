@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { connect } from 'react-redux';
-import { addTask } from '../actions/actions';
+import { createTask } from '../actions/actions';
 
 class TaskForm extends Component {
   state = {
@@ -16,7 +16,8 @@ class TaskForm extends Component {
   onClickAddTask = e => {
     e.preventDefault();
     
-    this.props.addTask(this.state.inputValueTask)
+    this.props.createTask(this.state.inputValueTask);
+    this.setState({ inputValueTask: '' });
   }
 
   render() {
@@ -35,7 +36,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addTask: task => dispatch(addTask(task))
+    createTask: task => dispatch(createTask(task))
   };
 };
 

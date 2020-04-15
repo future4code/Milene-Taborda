@@ -1,43 +1,17 @@
+import axios from "axios"
 
-
-export const addTask = (task) => {
+export const setTask = taskList => {
     return {
-        type: 'ADD_TASK',
+        type: 'SET_TASK',
         payload: {
-            task,
-            id: Date.now(),
-            complete: false
+            taskList
         }
-    }
-}
-
-export const completeTask = (id) => {
-    return {
-        type: 'COMPLETE_TASK',
-        payload: {
-            id
-        }
-    }
-}
-
-export const deleteTask = (id) => {
-    return {
-        type: 'DELETE_TASK',
-        payload: {
-           id
-       }
     }
 }
 
 export const completeAllTasks = () => {
     return {
         type: 'COMPLETE_ALL_TASKS'
-    }
-}
-
-export const deleteAllComplete = () => {
-    return {
-        type: 'DELETE_ALL_COMPLETE'
     }
 }
 
@@ -50,3 +24,36 @@ export const setFilter = (filter) => {
     }
 }
 
+
+export const fetchTasks = () => async (dispatch, getState) => {
+    const response = await axios.get('https://us-central1-missao-newton.cloudfunctions.net/reduxTodo/Milene/todos')
+
+    dispatch(setTask(response.data.todos))
+}
+
+export const createTask = text => async (dispatch, getState) => {
+    const body = {
+        text: text
+    }
+    const response = await axios.post('https://us-central1-missao-newton.cloudfunctions.net/reduxTodo/Milene/todos', body)
+
+    dispatch(fetchTasks()) 
+}
+
+export const completeTask = id => async (dispatch, getState) => {
+    const response = await axios.put(`https://us-central1-missao-newton.cloudfunctions.net/reduxTodo/Milene/todos/${id}/toggle`)
+
+    dispatch(fetchTasks())
+}
+
+export const deleteTask = id => async (dispatch, getState) => {
+    const response = await axios.delete(`https://us-central1-missao-newton.cloudfunctions.net/reduxTodo/Milene/todos/${id}`)
+
+    dispatch(fetchTasks())
+}
+
+export const deleteAllComplete = () => async (dispatch, getState) => {
+    const response = await axios.delete('https://us-central1-missao-newton.cloudfunctions.net/reduxTodo/Milene/todos/delete-done')
+
+    dispatch(fetchTasks())
+}
