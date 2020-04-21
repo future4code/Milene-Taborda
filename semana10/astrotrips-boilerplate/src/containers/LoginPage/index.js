@@ -5,16 +5,7 @@ import {  routes } from '../Router'
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import styled from "styled-components";
-
-const LoginWrapper = styled.form`
-  width: 100%;
-  height: 100vh;
-  gap: 10px;
-  place-content: center;
-  justify-items: center;
-  display: grid;
-`;
+import { LoginWrapper  } from './styles'
 
 class LoginPage extends Component {
   constructor(props) {
@@ -51,7 +42,7 @@ class LoginPage extends Component {
           label="Password"
           value={password}
         />
-        <Button onClick={this.props.goToListTrips}>Login</Button>
+        <Button variant="contained" color="primary" onClick={this.props.goToListTrips}>Login</Button>
       </LoginWrapper>
     );
   }

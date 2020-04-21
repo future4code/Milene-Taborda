@@ -4,7 +4,6 @@ import thunk from "redux-thunk";
 import { MuiThemeProvider, CssBaseline } from "@material-ui/core";
 import theme from "../../style/theme";
 import StyledGlobal from '../../global';
-
 import Router from "../Router";
 import { createBrowserHistory } from "history";
 import { createStore, applyMiddleware, compose } from "redux";
@@ -23,14 +22,15 @@ const middlewares = [
 const store = createStore(generateReducers(history), compose(...middlewares));
 
 export const App = () => (
-<StyledGlobal>  
+
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
+      <StyledGlobal />
       <Router history={history} />
     </MuiThemeProvider>
   </Provider>
-</StyledGlobal>
+
 );
 
 export default App;

@@ -1,6 +1,6 @@
 import {  createGlobalStyle} from 'styled-components'
 
-// import background from '../assets/images/background.svg'
+import background from './assets/images/background.svg'
 
 export default createGlobalStyle`
 
@@ -12,7 +12,7 @@ export default createGlobalStyle`
  }
 
  body {
-     background: orange ;
+     background: url(${background}) no-repeat center top;
      -webkit-font-smoothing: antialiased;
  }
 
@@ -22,9 +22,9 @@ export default createGlobalStyle`
  }
 
  #root {
-     max-width: 1020px;
+     max-width: 1070px;
      margin: 0 auto;
-     padding: 0 20px 50px;
+     padding: 0 0px 50px;
  }
 
  button {

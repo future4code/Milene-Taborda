@@ -3,22 +3,48 @@ import { connect } from "react-redux";
 import { push, replace } from "connected-react-router";
 import { routes } from '../Router/index';
 
-// import { Container } from './styles';
+import Header from '../../components/Header/Header'
+
+import { ListPageWrapper, Main } from './styles';
+import Button from "@material-ui/core/Button";
 
 function ListTripsPage(props) {
   return (
-    <>
-    <h1>Lista viagens</h1>
-    
-    <br/>
+    <ListPageWrapper>
+       <Button variant="contained" color="primary" onClick={props.goToCreateTrip}>Criar Viagem</Button>
+    <Header />
 
-    <button onClick={props.goToCreateTrip}>Criar Viagem</button>
+      <h1>Lista viagens</h1>
+    <Main>
+        <ul>
+          <li>
+            <span>blablabla</span>
+              <button onClick={props.goToDetailsTrip}>detalhes</button>
+          </li>
+        </ul>
 
-    <br/>
+        <ul>
+          <li>
+            <span>blablabla</span>
+              <button onClick={props.goToDetailsTrip}>detalhes</button>
+          </li>
+        </ul>
 
-    <button onClick={props.goToDetailsTrip}>detalhes</button>
+        <ul>
+          <li>
+            <span>blablabla</span>
+              <button onClick={props.goToDetailsTrip}>detalhes</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span>blablabla</span>
+              <button onClick={props.goToDetailsTrip}>detalhes</button>
+          </li>
+        </ul>
+    </Main>
 
-    </>
+    </ListPageWrapper>
   );
 }
 

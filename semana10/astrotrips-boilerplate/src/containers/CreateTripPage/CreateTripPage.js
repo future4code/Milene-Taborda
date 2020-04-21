@@ -1,16 +1,30 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { goBack } from "connected-react-router";
+import Header from '../../components/Header/Header';
 
-// import { Container } from './styles';
+import { CreateTripWrapper } from './styles';
+import TextField from '@material-ui/core/TextField';
+import Button from "@material-ui/core/Button";
 
 function CreateTripPage(props) {
   return (
-    <>
-    <h1>Criar viagem</h1>
-    <br />
-    <button onClick={props.goBack}>Lista viagens</button>
-    </>
+    <CreateTripWrapper>
+      <Header />
+
+      <Button variant="contained" color="primary" onClick={props.goBack}>Lista viagens</Button>
+    <div>
+      <h1>Criar viagem</h1>
+      <br />
+
+    <TextField 
+    label="Nome Completo"
+    placeholder="Exemplo: Milene Taborda"
+    />
+
+    </div>
+  
+    </CreateTripWrapper>
   );
 }
 

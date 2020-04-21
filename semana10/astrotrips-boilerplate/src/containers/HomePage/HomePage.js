@@ -1,16 +1,25 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { replace, push} from "connected-react-router";
-import { routes } from '../Router/index'
+import { routes } from '../Router/index';
+import Header from '../../components/Header/Header';
 
-import { HomeWrapper } from './styles';
+import { HomeWrapper, Main, ButtonLogin } from './styles';
+import Button from "@material-ui/core/Button";
+
 
 function HomePage(props) {
   return (
     <HomeWrapper>
-    <h1>HomePage</h1>
-    <button onClick={props.goToLogin}>Login</button>
-    <button onClick={props.goToForm}>Formulario</button>
+          <Header />
+          <Main>
+            <h1>VENHA EXPLORAR COM A GENTE!!</h1>
+            <h2>LIBERDADE</h2>
+            <h3>Está esperando por você!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora enim repellendus numquam autem iste eaque illum corrupti ab magni obcaecati, laboriosam sunt, veritatis, similique perferendis. Odio deleniti molestias porro illum!</p>
+            <ButtonLogin variant="contained" color="" onClick={props.goToLogin}>Login</ButtonLogin>
+            <Button variant="contained" color="primary" onClick={props.goToForm}>Formulario</Button>
+        </Main>
     </HomeWrapper>
   );
 }
