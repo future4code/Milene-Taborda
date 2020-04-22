@@ -11,16 +11,16 @@ export const HomeWrapper = styled.div`
     padding: 0 18px;
 `
 export const Main = styled.div`
-
+    padding-top: 220px;
     width: 400px; 
     margin: 0 25px;
-    margin-top: 90px;
     text-align: center;
 
     > h1 {
         font-family: 'Comfortaa', cursive;
         font-weight: 300;
         font-size: 20px;
+        
     }
 
     > h2 {

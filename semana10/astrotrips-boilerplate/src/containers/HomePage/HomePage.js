@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 function HomePage(props) {
   return (
     <HomeWrapper>
-          <Header />
+          
           <Main>
             <h1>VENHA EXPLORAR COM A GENTE!!</h1>
             <h2>LIBERDADE</h2>

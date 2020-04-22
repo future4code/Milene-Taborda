@@ -26,8 +26,8 @@ export const App = () => (
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <StyledGlobal />
-      <Router history={history} />
+        <StyledGlobal />
+        <Router history={history} />
     </MuiThemeProvider>
   </Provider>
 

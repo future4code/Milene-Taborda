@@ -7,6 +7,7 @@ import CreateTripPage from '../CreateTripPage/CreateTripPage';
 import ListTripsPage from '../ListTripsPage/ListTripsPage';
 import TripDetailsPage from '../TripDetailsPage/TripDetailsPage';
 import ApplicationFormPage from '../ApplicationFormPage/ApplicationFormPage';
+import Header from '../../components/Header/Header';
 
 export const routes = {
   root: "/",
@@ -20,6 +21,8 @@ export const routes = {
 function Router(props) {
   return (
     <ConnectedRouter history={props.history}>
+      {/* <Header /> */}
+
       <Switch>
         <Route exact path={routes.root} component={HomePage} />
         <Route exact path={routes.login} component={LoginPage} />
