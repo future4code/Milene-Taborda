@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from "react-redux";
 import { replace, push} from "connected-react-router";
 import { routes } from '../Router/index';
-import Header from '../../components/Header/Header';
 
 import { HomeWrapper, Main, ButtonLogin } from './styles';
 import Button from "@material-ui/core/Button";

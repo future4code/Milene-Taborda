@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { replace } from "connected-react-router";
-import {  routes } from '../Router'
+import {  routes } from '../Router';
+import { login } from '../../actions';
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -22,11 +23,25 @@ class LoginPage extends Component {
     });
   };
 
+  handleLogin = event => {
+    event.preventDefault();
+
+    this.props.login(this.state.email, this.state.password);
+    console.log(this.state)
+  }
+
+  //USAR EM UM BOTAO LOGOUT
+  handleLogout = () => {
+    localStorage.clear();
+  }
+
   render() {
     const { email, password } = this.state;
+    // const isLogged = localStorage.getItem("token") !== null;
 
     return (
-      <LoginWrapper>
+      <>
+      <LoginWrapper onSubmit={this.handleLogin}>
       
         <TextField
           onChange={this.handleFieldChange}
@@ -34,6 +49,7 @@ class LoginPage extends Component {
           type="email"
           label="E-mail"
           value={email}
+          required
         />
         <TextField
           onChange={this.handleFieldChange}
@@ -41,18 +57,21 @@ class LoginPage extends Component {
           type="password"
           label="Password"
           value={password}
+          required
         />
-        <Button variant="contained" color="primary" onClick={this.props.goToListTrips}>Login</Button>
+        <Button variant="contained" color="primary" type="submit">Login</Button>
       </LoginWrapper>
+
+      {/* {isLogged && <button onClick={this.handleLogout}>Logout</button>} */}
+    </>
     );
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    goToListTrips: () => dispatch(replace(routes.listTrips))
-  }
-}
+const mapDispatchToProps = dispatch => ({
+    //goToListTrips: () => dispatch(replace(routes.listTrips)),
+    login: (email, password) => dispatch(login(email, password))
+})
 
 export default connect(
   null, 
