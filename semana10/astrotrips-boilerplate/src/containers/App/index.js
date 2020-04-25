@@ -3,7 +3,8 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { MuiThemeProvider, CssBaseline } from "@material-ui/core";
 import theme from "../../style/theme";
-import StyledGlobal from '../../global';
+import StyledGlobal from '../../style/global';
+import { Button } from './styles';
 
 import Header from '../../components/Header/Header';
 import Router from "../Router";
@@ -21,6 +22,11 @@ const middlewares = [
     : f => f
 ];
 
+const handleLogout = (e) => {
+  localStorage.clear();
+}
+
+const isLogged = localStorage.getItem("token") !== null;
 const store = createStore(generateReducers(history), compose(...middlewares));
 
 export const App = () => (
@@ -28,6 +34,7 @@ export const App = () => (
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
         <Header />
+          {isLogged && <Button onClick={handleLogout}>Logout</Button>} 
         <CssBaseline />
         <StyledGlobal />
         <Router history={history} />

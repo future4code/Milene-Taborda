@@ -21,7 +21,6 @@ state = {
 }
 
 componentDidMount() {
-  
   this.props.getAllTrips()
 }
 
@@ -46,7 +45,7 @@ selectCountry (val) {
  render() {
   return (
     <ContainerForm>
-        <h1>Formulário com styled-components</h1>
+        <h1>Formulário de inscrição</h1>
 
 <section>
   <form  onSubmit={this.handleSubmitForm}>

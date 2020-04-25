@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { replace } from "connected-react-router";
-import {  routes } from '../Router';
 import { login } from '../../actions';
 
 import TextField from "@material-ui/core/TextField";
@@ -30,14 +28,8 @@ class LoginPage extends Component {
     console.log(this.state)
   }
 
-  //USAR EM UM BOTAO LOGOUT
-  handleLogout = () => {
-    localStorage.clear();
-  }
-
   render() {
     const { email, password } = this.state;
-    // const isLogged = localStorage.getItem("token") !== null;
 
     return (
       <>
@@ -61,15 +53,12 @@ class LoginPage extends Component {
         />
         <Button variant="contained" color="primary" type="submit">Login</Button>
       </LoginWrapper>
-
-      {/* {isLogged && <button onClick={this.handleLogout}>Logout</button>} */}
     </>
     );
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-    //goToListTrips: () => dispatch(replace(routes.listTrips)),
     login: (email, password) => dispatch(login(email, password))
 })
 

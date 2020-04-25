@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { push, replace } from "connected-react-router";
 import { routes } from '../Router/index';
-import Header from '../../components/Header/Header'
 
 import { ListPageWrapper, Main } from './styles';
 import Button from "@material-ui/core/Button";
-import { getAllTrips, getTrips, getTripDetail, getTripId } from '../../actions';
+import {  getTrips, getTripId } from '../../actions';
 
 
 class ListTripsPage extends Component{
@@ -29,8 +28,7 @@ class ListTripsPage extends Component{
   return (
     <ListPageWrapper>
        <Button variant="contained" color="primary" onClick={this.props.goToCreateTrip}>Criar Viagem</Button>
-    <Header />
-
+    
       <h1>Lista viagens</h1>
     <Main>
       <ul>

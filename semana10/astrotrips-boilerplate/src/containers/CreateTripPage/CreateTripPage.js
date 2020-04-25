@@ -78,16 +78,18 @@ class CreateTripPage extends Component {
       form: { ...this.state.form, [name]: value },
     });
   };
+
   handleSelectedPlanet = (e) => {
     this.setState({
       form: { ...this.state.form, planet: e.target.value },
     });
     console.log(e.target.value)
   };
+
   handleFormSubmit = (e) => {
     e.preventDefault();
+    
     this.props.createNewTrip(this.state.form, localStorage.getItem("token"))
-    //console.log(this.state.form)
   };
 
   render() {
