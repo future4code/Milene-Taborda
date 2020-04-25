@@ -5,7 +5,7 @@ import { routes } from '../Router/index';
 
 import { ListPageWrapper, Main } from './styles';
 import Button from "@material-ui/core/Button";
-import {  getTrips, getTripId } from '../../actions';
+import {  getTrips,  getTripId } from '../../actions';
 
 
 class ListTripsPage extends Component{
@@ -24,11 +24,19 @@ class ListTripsPage extends Component{
     this.props.goToDetailsTrip()
   }
 
+  handleLogout = () => {
+    localStorage.clear();
+    this.props.goToLogin();
+  }
+
   render() {
+    const isLogged = localStorage.getItem("token") !== null;
+
   return (
     <ListPageWrapper>
        <Button variant="contained" color="primary" onClick={this.props.goToCreateTrip}>Criar Viagem</Button>
-    
+       {isLogged && <Button variant="contained" onClick={this.handleLogout}>Logout</Button>}
+
       <h1>Lista viagens</h1>
     <Main>
       <ul>

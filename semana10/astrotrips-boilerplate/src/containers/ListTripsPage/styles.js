@@ -9,7 +9,7 @@ export const ListPageWrapper = styled.div`
 
     > button {
         float: right;
-        margin: 40px ; 
+        margin: 40px 20px; 
     }
 
     Header {
@@ -18,7 +18,7 @@ export const ListPageWrapper = styled.div`
     }
 
     > h1 {
-        padding-top: 130px;
+        padding-top: 120px;
         text-align: center;
     }
 `
@@ -29,7 +29,7 @@ export const Main = styled.main`
 
      ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 0.5fr);
         grid-gap: 20px;
         list-style-type: none;
 

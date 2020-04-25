@@ -4,7 +4,8 @@ import Button from "@material-ui/core/Button";
 
 
 export const HomeWrapper = styled.div`
-    height: 90vh;
+    min-height: 90vh;
+    max-height: 100%;
     background: #fff url(${background}) no-repeat top right;
     background-size: 65%;
     color: black;

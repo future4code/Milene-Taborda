@@ -26,14 +26,14 @@ export const DetailsWrapper = styled.div`
         margin-top: 20px;
         display: grid;
         grid-template-columns: 0.1fr 1fr;
-        background: #eee;
+        background: #eee ;
         border-radius: 10px;
 
         p {
-            background: lightgrey;
+            border-bottom: solid 1px lightgrey;
             margin: 2px 0; 
             padding: 5px;
-            border-radius: 10px;
+
         }
 
         button {
