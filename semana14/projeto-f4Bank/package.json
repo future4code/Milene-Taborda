@@ -1,0 +1,14 @@
+{
+  "name": "projetof4Bank",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": ""
+  },
+  "dependencies": {
+    "@types/node": "^14.0.4",
+    "i": "^0.3.6",
+    "moment": "^2.26.0"
+  }
+}
