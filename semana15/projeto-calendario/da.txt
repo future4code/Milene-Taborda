@@ -1,0 +1,45 @@
+import * as moment from 'moment';
+moment.locale('pt-br');
+
+const allEvents: object[] = [];
+
+
+type event = {
+  name: string,
+  description: string,
+  date: string,
+  start: string,
+  end: string
+};
+
+const getEvents = async (): Promise<void> => {
+ try {
+  console.log(allEvents);
+
+ } catch {
+  console.log("Erro inesperado. Tente novamente!");
+ }
+}
+
+const createEvent = async (name: string, description: string, date: moment.Moment) => {
+  try { 
+    const newdata = date.format('L LTS');
+    const createNewEvent: event = {
+      name,
+      description,
+      date: newdata,
+      
+    }
+
+    for(let i; i >= allEvents.length ; i++) {
+      allEvents.push(createNewEvent);
+      console.log("Evento criado com sucesso!");
+    }
+
+  } catch {
+    console.log("Erro inesperado. Tente novamente!");
+  }
+}
+
+createEvent("Festa no apê", "Vai rolar bundalêlê", moment());
+
