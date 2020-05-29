@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/createAccount/index.ts"],"names":[],"mappings":"AAOA,MAAM,QAAQ,GAAY;IACtB,IAAI,EAAE,UAAU;IAChB,GAAG,EAAE,EAAE;IACP,OAAO,EAAE,GAAG,EAAE,GAAG,OAAO,CAAC,GAAG,CAAC,iBAAiB,EAAE,IAAI,EAAG,GAAG,CAAC,CAAA,CAAC,CAAC;CAChE,CAAA"}

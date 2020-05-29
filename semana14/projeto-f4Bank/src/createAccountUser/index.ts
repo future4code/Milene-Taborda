@@ -4,35 +4,40 @@ import * as moment from 'moment';
 import * as fs from 'fs';
 
 moment.locale('pt-br');
-export const fileUsers: string = '../todoUsers.json';
-export const accounts = require('../todoUsers.json');
+export const fileUsers: string = 'todoUsers.json';
+export const accounts = require('../../todoUsers.json');
 
 type account = {
   name: string,
   cpf: string,
-  birthDate:  moment.Moment,
+  birthDate:  string,
   balance: number,
   extract: extract[]
+  transactions: extract[]
 };
 
 export type extract = {
   value: number,
   description: string,
-  date: moment.Moment,
+  date: string,
 };
 
-const createAccountUser: account = {
-  name: process.argv[2],
-  cpf: process.argv[3],
-  birthDate: moment(process.argv[4], 'DD/MM/YYYY'),
-  balance: 0,
-  extract: []
-};
 
-function createAccount() {
+function createAccount(name: string, cpf: string, birthDate: moment.Moment) {
 
-  const age = Math.floor(moment(new Date()).diff(moment(createAccountUser.birthDate),'years',true));
-  
+  const formatedBirthDate = birthDate.format("L");
+
+  const createAccountUser: account = {
+    name,
+    cpf ,
+    birthDate: formatedBirthDate,
+    balance: 0,
+    extract: [],
+    transactions: []
+  };
+
+  const age = Math.floor(moment(new Date()).diff(moment(birthDate),'years',true));
+
   try {
     if(age >= 18){
       const checkCpf = accounts.find((account: any) => {
@@ -65,19 +70,5 @@ function getAllAccounts() {
   };
 };
 
-//createAccount();
-//getAllAccounts();
-
-// const extractAccount: extract = {
-//   value: 0, 
-//   date: moment('DD/MM/YYYY'), 
-//   description: "Transferência Online"
-// }
-
-// console.log(`Seja bem vindo(a) ${createAccountUser.name}!`);
-
-// console.log('-----------Personal Data-----------');
-// console.log('CPF: ', createAccountUser.cpf);
-// console.log('Data Nasc. :', createAccountUser.birthDate);
-// console.log('-----------Extract-----------');
-// console.log(extractAccount);
+//createAccount(process.argv[2], process.argv[3], moment(process.argv[4], 'DD/MM/YYYY') );
+getAllAccounts();
