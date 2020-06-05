@@ -1,0 +1,14 @@
+{
+  "name": "projeto_labenusystem",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node ./build/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.10",
+    "moment": "^2.26.0",
+    "typescript": "^3.9.3"
+  }
+}
