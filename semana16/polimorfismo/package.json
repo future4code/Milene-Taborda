@@ -1,0 +1,13 @@
+{
+  "name": "polimorfismo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc  && node ./build/index.js"
+  },
+  "dependencies": {
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.3"
+  }
+}
