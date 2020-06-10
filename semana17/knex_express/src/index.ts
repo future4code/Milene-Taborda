@@ -34,8 +34,9 @@ const searchActor = async (name: string): Promise<any>  =>{
 };
 
 const countActors = async (gender: string): Promise<any> => {
-  const result = await connection.select().count("*").from("Actor").where({sex: gender});
-  console.log(result)
+  const result = await connection.select("*").from("Actor").where({sex: gender});
+  const count = result[0][0].count;
+  return count;
 }
 
 //searchActor("Tony Ramos");
