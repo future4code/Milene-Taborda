@@ -1,0 +1,19 @@
+[
+  {
+    "name": "milene",
+    "cpf": "12345678910",
+    "birthDate": "23/12/1998",
+    "balance": 270,
+    "extract": [
+      { "value": -200, "date": "29/05/2020", "description": "Algo" },
+      { "value": -200, "date": "29/05/2020", "description": "Algo" },
+      { "value": -200, "date": "28/05/2020", "description": "Algo" },
+      { "value": -200, "date": "29/05/2020", "description": "Algo" }
+    ],
+    "transactions": [
+      { "value": -200, "date": "28/05/2020", "description": "Algo" },
+      { "value": -200, "date": "29/05/2020", "description": "Algo" },
+      { "value": -20, "date": "31/05/2020", "description": "cinema" }
+    ]
+  }
+]

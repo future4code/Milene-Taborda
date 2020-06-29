@@ -1,0 +1,15 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc && node build/createAccountUser/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.4",
+    "i": "^0.3.6",
+    "moment": "^2.26.0",
+    "typescript": "^3.9.3"
+  }
+}
