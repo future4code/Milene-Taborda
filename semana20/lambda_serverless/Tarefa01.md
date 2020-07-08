@@ -74,9 +74,9 @@ exports.handler = async event => {
 
 };
 
- **Exercício 02
+ **Exercício 04
 
  >Feito.
  
- **Exercício 02
+ **Exercício 05
  >Feito.
